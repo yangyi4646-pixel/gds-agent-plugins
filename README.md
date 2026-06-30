@@ -1,4 +1,4 @@
-# gds-agent-plugins
+# grounded
 
 A Claude Code / Codex **plugin marketplace** containing a two-skill pipeline that
 turns a thin requirement into front-end code **anchored to your existing product** —
@@ -37,9 +37,9 @@ invent new interactions or design patterns.
 ## Install
 
 ```
-/plugin marketplace add yangyi4646-pixel/gds-agent-plugins
-/plugin install prd-to-spec@gds-agent-plugins
-/plugin install spec-to-code@gds-agent-plugins
+/plugin marketplace add yangyi4646-pixel/grounded
+/plugin install prd-to-spec@grounded
+/plugin install spec-to-code@grounded
 ```
 
 Then invoke with `/prd-to-spec` and `/spec-to-code`.
@@ -47,13 +47,13 @@ Then invoke with `/prd-to-spec` and `/spec-to-code`.
 本地试装(克隆后):
 
 ```
-/plugin marketplace add ./gds-agent-plugins
+/plugin marketplace add ./grounded
 ```
 
 ## Layout
 
 ```
-gds-agent-plugins/                       ← repo = marketplace
+grounded/                       ← repo = marketplace
   .claude-plugin/marketplace.json
   plugins/
     prd-to-spec/

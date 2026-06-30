@@ -1,5 +1,5 @@
 {
-  "name": "gds-agent-plugins",
+  "name": "grounded",
   "owner": { "name": "Yangyi" },
   "metadata": {
     "description": "A two-skill pipeline for turning thin requirements into spec, and frozen specs into front-end code — anchored to your existing product instead of inventing new UX."

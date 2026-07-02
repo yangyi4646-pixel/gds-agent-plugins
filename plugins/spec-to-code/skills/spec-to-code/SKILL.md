@@ -44,7 +44,7 @@ NO IMPLEMENTATION OF AFFECTED UNITS WITH UNCONFIRMED P0/P1 CONTRACT GAPS.
 | 多对象、字段映射、详情、卡片、表格、头部/展开、重复信息 | `templates/product-structure-preflight.md`, `scripts/check_product_structure_preflight.py` |
 | Scope Boundary / P0/P1 / 验证层级 | `references/verify-loop.md`, `templates/verification-report.md` |
 | 原型可跑、评第一次来的人用不用得懂(可用性) | `references/usability-walkthrough.md`(verify 第 11 门,fresh 子代理) |
-| 实现发现 SPEC 缺失、冲突或 PRD 路径被源码覆盖 | `templates/return-to-spec-list.md` |
+| 实现发现 SPEC 缺失、冲突、PRD 路径被源码覆盖;拟定交互形态暗示了被 SPEC/PRD 约束禁止的操作;或发现自己在写「切换清空 / 禁用 / 自动纠正」这类唯一目的是守住某条约束的补丁代码 | `templates/return-to-spec-list.md` |
 | 实现边界需要机械检查 | `scripts/check_implementation_boundary.py` |
 | 完成层级需要机械检查 | `scripts/check_completion_tier.py` |
 
@@ -58,6 +58,7 @@ NO IMPLEMENTATION OF AFFECTED UNITS WITH UNCONFIRMED P0/P1 CONTRACT GAPS.
 - P1 影响当前单元,且截止点是 `before spec-to-code` 或 `before affected unit implementation`:升级为该单元 P0。
 - 多对象/字段映射/头部展开 UI 缺当前页面主对象、信息归属矩阵、头部职责、展开职责、去重规则、当前页不承载信息:停止受影响路径。
 - 视觉或样式声明没有真实渲染节点、computed style、DOM、bounding box、screenshot 或 unchecked reason:不得声称视觉对齐。
+- 冻结约束的交互后果是产品决策:拟定 UI 会让用户攒出违反 SPEC/PRD 约束的状态(如 可浏览多账户列表 vs 同源约束),或需要写「切换清空 / 禁用 / 自动纠正」类守约补丁而 SPEC 未冻结该行为(§0 无「边界规则与交互后果」行):停止受影响路径,写 return-to-spec 一行冒泡;**禁止自打创可贴消化**。
 
 ## Return-to-Spec List
 
